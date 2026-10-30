@@ -25,5 +25,5 @@ Kein Build-Schritt nötig (Framework Preset: „Other“, Output-Verzeichnis: Pr
 
 ## Vor dem Livegang prüfen
 
-- Impressum: E-Mail-Adresse ergänzen (Pflichtangabe nach § 5 DDG), ggf. USt-IdNr. und Handwerkskammer
+- Impressum: ggf. USt-IdNr. und Handwerkskammer ergänzen
 - Angaben (Inhaberin, Leistungen, Einsatzgebiet) mit dem Betrieb abstimmen
