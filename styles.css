@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Archivo";
-  src: url("/fonts/archivo-var.woff") format("woff");
+  src: url("/archivo-var.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 62% 125%;
   font-style: normal;

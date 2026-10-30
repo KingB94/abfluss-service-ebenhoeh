@@ -9,7 +9,7 @@ Live: https://abfluss-service-ebenhoeh.vercel.app
 - `index.html` – Startseite (Leistungen, Ablauf, Erste Hilfe, Bewertungen, FAQ, Kontakt)
 - `impressum.html`, `datenschutz.html`, `404.html`
 - `styles.css` – gesamtes Styling
-- `fonts/` – Archivo (SIL Open Font License), lokal gehostet
+- `archivo-var.woff` – Schrift Archivo (SIL Open Font License, siehe `OFL-Archivo.txt`), lokal gehostet
 - `vercel.json` – saubere URLs und Sicherheits-Header (strikte CSP)
 
 ## Datenschutz
