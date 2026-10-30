@@ -1,4 +1,2 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://abfluss-service-ebenhoeh.vercel.app/sitemap.xml
+Disallow: /
