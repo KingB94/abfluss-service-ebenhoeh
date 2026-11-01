@@ -17,18 +17,18 @@ Der Entwurf läuft unter dem echten Namen und den echten Kontaktdaten des Betrie
 
 | Seite | Design | Dateien |
 |---|---|---|
-| `/` | 1 Einsatz: Signalgelb, Anthrazit, große Telefonnummer | `index.html`, `styles.css` |
-| `/design-2` | 2 Kontur: dunkel, Foto, Kupfer | `design-2.html`, `design-2.css` |
-| `/design-3` | 3 Werkstatt: Papier, Serife, Tannengrün | `design-3.html`, `design-3.css` |
+| `/` | 1 Einsatz: Fahrzeugblau, Anthrazit, große Telefonnummer | `index.html`, `styles.css` |
+| `/design-2` | 2 Kontur: Anthrazit, Fahrzeugfoto, Hellblau | `design-2.html`, `design-2.css` |
+| `/design-3` | 3 Werkstatt: heller Grund, Serife, Logoblau | `design-3.html`, `design-3.css` |
 | `/designs` | neutrale Vergleichsseite | `designs.html`, `designs.css` |
 
 - `switcher.css` – Umschalter zwischen den Designs, reine Links
-- `impressum.html`, `datenschutz.html`, `404.html` – nutzen das Design 1
-- `images/` – Fotos für Design 2 und Vorschaubilder für `/designs`
+- `impressum.html`, `datenschutz.html`, `agb.html`, `404.html` – nutzen das Design 1
+- `images/` – Fahrzeugfotos, Logo und Vorschaubilder für `/designs`
 - `archivo-var.woff`, `fraunces-var.woff2`, `plex-sans-*.woff2` – lokale Schriften (SIL Open Font License, siehe `OFL-*.txt`)
 - `vercel.json` – saubere URLs, Sicherheits-Header (strikte CSP), noindex
 
-Die Texte stehen in jeder Seite als HTML. Eine Änderung an Fakten oder Telefonnummer muss deshalb in `index.html`, `design-2.html` und `design-3.html` erfolgen. Design 1 und die beiden neuen Designs unterscheiden sich im Inhalt nur in zwei Punkten: Design 2 zeigt statt der Hausskizze ein Foto, und die Quellenangabe bei den Bewertungen verweist auf „den Link bei der Gesamtbewertung“.
+Die Texte stehen in jeder Seite als HTML. Eine Änderung an Fakten oder Telefonnummer muss deshalb in `index.html`, `design-2.html` und `design-3.html` erfolgen. Design 1 und die beiden neuen Designs unterscheiden sich im Inhalt nur in zwei Punkten: Design 2 zeigt statt der Hausskizze ein Heckfoto des Fahrzeugs, und die Quellenangabe bei den Bewertungen verweist auf „den Link bei der Gesamtbewertung“.
 
 ## Datenschutz
 
@@ -36,27 +36,39 @@ Die Texte stehen in jeder Seite als HTML. Eine Änderung an Fakten oder Telefonn
 - kein JavaScript
 - keine externen Ressourcen (Schriften und Bilder lokal, keine eingebettete Karte – nur ein Link zu Google Maps)
 
+## Farben und Logo
+
+| Farbe | Wert | Herkunft |
+|---|---|---|
+| Anthrazit | `#343636` | Logo |
+| Logoblau | `#007096` | Pfeile im Logo |
+| Fahrzeugblau | `#86b3f3` | Beschriftung Einsatzfahrzeug |
+| Rot | `#c8323a` | Schriftzug EBENHÖH, Visitenkarte |
+| Reflexgelb | `#dee410` | Streifen am Fahrzeug, nur Design 1 |
+
+`images/logo.svg` und `favicon.svg` (nur das Zeichen) sind nach dem Logo und dem Heckfoto als Vektor nachgezeichnet, weil vom Betrieb nur eine PNG-Datei mit 99 × 93 px vorliegt. Der Schriftzug ist aus Archivo gesetzt und weicht leicht vom Original ab. Falls der Betrieb eine Vektordatei hat, diese bevorzugen.
+
 ## Bilder
 
-| Datei | Motiv | Quelle | Lizenz |
-|---|---|---|---|
-| `images/deckel-*.webp` | Schachtdeckel, Viborg (Dänemark) | [W.carter, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Manhole_cover_at_Viborg_Katedralskole.jpg) | gemeinfrei (PD-self) |
-| `images/strahl-band-*.webp` | Reinigung eines Abflussschachts, Greenville (USA) | [City of Greenville, Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Storm_Drain_Cleaning_(53904492315).jpg) | Public Domain Mark |
+| Datei | Motiv | Quelle |
+|---|---|---|
+| `images/fahrzeug-seite-*.webp`, `images/fahrzeug-breit-*.webp` | Einsatzfahrzeug von der Seite | Abfluss-Service Ebenhöh |
+| `images/fahrzeug-heck-*.webp` | Einsatzfahrzeug von hinten | Abfluss-Service Ebenhöh |
 
-Beide Fotos sind **Platzhalter** und zeigen nicht den Betrieb. Der Maps-Eintrag enthielt beim Abruf nur ein einziges Foto (abgesackter Schachtdeckel in einer Einfahrt), das nicht verwendbar ist. Für die Vergleichsseite liegen unter `images/vorschau-*.webp` Bildschirmfotos der drei Designs; sie müssen nach sichtbaren Änderungen neu erzeugt werden.
-
-Der Betrieb hat nach bisherigem Stand kein öffentliches Logo. Design 2 und 3 nutzen deshalb nur den Namen als Wortmarke. Das runde Zeichen in Design 1 und `favicon.svg` wurde für die Website gezeichnet und stammt nicht vom Betrieb.
+Der Betrieb will noch aktuelle Fotos liefern. Für die Vergleichsseite liegen unter `images/vorschau-*.webp` Bildschirmfotos der drei Designs; sie müssen nach sichtbaren Änderungen neu erzeugt werden.
 
 ## Bestätigt und offen
 
 | Angabe | Stand |
 |---|---|
-| Name, Adresse, Telefon, E-Mail-Adresse, Inhaberin | aus Version 1 übernommen, mit dem Betrieb abstimmen |
+| Telefon, Mobilnummer, E-Mail-Adresse, Leistungen, 24-Stunden-Dienst | bestätigt durch Fahrzeugbeschriftung und E-Mail des Betriebs (1. 11. 2026) |
+| Inhaberin Rosa Ebenhöh, 85413 Hörgertshausen | bestätigt durch E-Mail des Betriebs |
+| Straße Kimodenstraße 2, Einsatzgebiet | aus Version 1 übernommen, mit dem Betrieb abstimmen |
 | Bewertung (4,6 aus 9) | aus Version 1 übernommen, vor dem Livegang auf Google Maps gegenprüfen |
-| Erreichbarkeit rund um die Uhr, Einsatzgebiet, Leistungen | aus Version 1 übernommen, mit dem Betrieb abstimmen |
 | Rezensionen | sinngemäß wiedergegeben und auf der Seite so gekennzeichnet |
 | USt-IdNr., Handwerkskammer | offen, im Impressum ggf. ergänzen |
-| Eigene Fotos, Logo | offen, beim Betrieb anfragen |
+| AGB | Wortlaut des Scans, nur Inhaberin und Ort geändert; rechtlich veraltet, siehe unten |
+| Neue Fotos | kommen vom Betrieb |
 
 ## Deployment
 
@@ -73,6 +85,7 @@ Kein Build-Schritt nötig (Framework Preset: „Other“, Output-Verzeichnis: Pr
 
 ## Vor dem Livegang prüfen
 
+- AGB rechtlich prüfen lassen: Der Text stammt aus der Zeit vor 2002 („Vollkaufmann“, „Wandelung“, „zugesicherte Eigenschaft“, „Diskontsatz der Deutschen Bundesbank“), die Haftungsausschlüsse in Ziffer 5 und 6 und der Mindestzins von 11 % sind gegenüber Privatkunden kritisch. In Ziffer 7 steht vermutlich versehentlich „Arbeitnehmer“ statt „Auftragnehmer“.
 - Impressum: ggf. USt-IdNr. und Handwerkskammer ergänzen
 - Angaben (Inhaberin, Leistungen, Einsatzgebiet) mit dem Betrieb abstimmen
 - Zustimmung des Betriebs einholen

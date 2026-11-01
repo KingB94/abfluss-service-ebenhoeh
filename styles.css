@@ -11,17 +11,19 @@
 }
 
 :root {
-  /* Farben aus der Welt der Hausentwässerung:
-     HT-Rohr-Grau, Schachtdeckel-Anthrazit, Signalgelb vom Einsatzfahrzeug */
-  --paper: #e6e9e8;
-  --surface: #f5f6f5;
-  --ink: #17262c;
-  --ink-soft: #46565c;
-  --pipe: #7c878b;
-  --line: #c4cbcc;
-  --signal: #f6c500;
-  --signal-ink: #17262c;
-  --water: #1b5a75;
+  /* Farben des Betriebs: Anthrazit und Blau aus dem Logo, Hellblau, Rot
+     und der gelbe Reflexstreifen von der Fahrzeugbeschriftung */
+  --paper: #e9eff6;
+  --surface: #f6f8fb;
+  --ink: #343636;
+  --ink-soft: #545a60;
+  --pipe: #7d8894;
+  --line: #c6d1de;
+  --signal: #86b3f3;
+  --signal-ink: #1f2121;
+  --water: #007096;
+  --brand-red: #c8323a;
+  --reflex: #dee410;
 
   --measure: 66ch;
   --wrap: 72rem;
@@ -104,7 +106,7 @@ p { margin: 0 0 1em; max-width: var(--measure); }
   top: 0;
   z-index: 20;
   background: var(--paper);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 3px solid var(--reflex);
 }
 
 .site-header .wrap {
@@ -122,7 +124,7 @@ p { margin: 0 0 1em; max-width: var(--measure); }
   text-decoration: none;
   line-height: 1;
 }
-.brand svg { width: 2rem; height: 2rem; flex: none; }
+.brand img { width: 2.5rem; height: 2.5rem; flex: none; }
 .brand-name {
   display: flex;
   flex-direction: column;
@@ -132,6 +134,7 @@ p { margin: 0 0 1em; max-width: var(--measure); }
   font-size: 1.35rem;
   font-stretch: 75%;
   font-weight: 800;
+  color: var(--brand-red);
 }
 .brand-name span {
   font-size: 0.8rem;
@@ -228,6 +231,9 @@ p { margin: 0 0 1em; max-width: var(--measure); }
   font-weight: 500;
 }
 
+.alt-tel { margin: 0.9rem 0 0; font-size: var(--step-1); }
+.alt-tel a { color: var(--ink); font-weight: 700; white-space: nowrap; }
+
 .facts {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -300,6 +306,12 @@ p { margin: 0 0 1em; max-width: var(--measure); }
   color: var(--ink-soft);
   margin-top: 0.6rem;
 }
+
+/* Einsatzfahrzeug */
+.vehicle { padding-block: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.vehicle figure { margin: 0; }
+.vehicle img { width: 100%; height: auto; border-radius: 6px; }
+.vehicle figcaption { margin-top: 0.75rem; font-size: var(--step--1); color: var(--ink-soft); }
 
 /* Ablauf – echte Reihenfolge, daher nummeriert */
 .steps {
@@ -451,7 +463,7 @@ p { margin: 0 0 1em; max-width: var(--measure); }
 /* Kontakt */
 .contact {
   background: var(--ink);
-  color: #e9eeef;
+  color: #eef1f4;
 }
 .contact h2 { color: #fff; }
 .contact a { color: #fff; }
@@ -460,7 +472,7 @@ p { margin: 0 0 1em; max-width: var(--measure); }
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(2rem, 5vw, 4.5rem);
 }
-.contact-lede { color: #b9c5c8; font-size: var(--step-1); margin-top: 1rem; }
+.contact-lede { color: #c8ced3; font-size: var(--step-1); margin-top: 1rem; }
 .contact-tel {
   display: inline-block;
   margin-top: 1.5rem;
@@ -480,11 +492,13 @@ p { margin: 0 0 1em; max-width: var(--measure); }
   grid-template-columns: 9rem 1fr;
   gap: 1rem;
   padding-block: 0.9rem;
-  border-top: 1px solid #33454c;
+  border-top: 1px solid #505456;
 }
-.contact dl div:last-child { border-bottom: 1px solid #33454c; }
-.contact dt { color: #9fb0b4; }
+.contact dl div:last-child { border-bottom: 1px solid #505456; }
+.contact dt { color: #b6bcc1; }
 .contact dd { margin: 0; }
+
+.contact-logo { width: 7rem; height: auto; margin-top: 1.75rem; }
 
 .contact-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
 .btn-signal {
@@ -495,23 +509,23 @@ p { margin: 0 0 1em; max-width: var(--measure); }
 }
 .btn-ghost {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  border: 1.5px solid #6d8288; color: #fff !important;
+  border: 1.5px solid #7f868a; color: #fff !important;
   text-decoration: none; font-weight: 600; font-stretch: 87%;
   padding: 0.75rem 1.15rem; border-radius: 3px;
 }
 .btn-signal:hover, .btn-ghost:hover { text-decoration: underline; }
 .btn-signal svg, .btn-ghost svg { width: 1.1rem; height: 1.1rem; }
-.contact .fine { color: #9fb0b4; font-size: var(--step--1); margin-top: 1rem; }
+.contact .fine { color: #b6bcc1; font-size: var(--step--1); margin-top: 1rem; }
 
 /* Fußzeile */
 .site-footer {
-  background: #0f1c21;
-  color: #9fb0b4;
+  background: #252727;
+  color: #b6bcc1;
   font-size: var(--step--1);
   padding-block: 1.75rem 2rem;
 }
 .site-footer .wrap { display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; align-items: center; }
-.site-footer a { color: #dfe7e9; }
+.site-footer a { color: #e8ecf0; }
 .site-footer nav { display: flex; gap: 1.25rem; }
 .site-footer .nocookie { margin-left: auto; }
 
